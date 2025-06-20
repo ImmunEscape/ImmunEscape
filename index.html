@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,22 +16,19 @@
       background: #26c4ec;
       color: white;
       padding: 1rem;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      flex-wrap: wrap;
       text-align: center;
     }
     header img {
-      max-height: 120px;
+      max-height: 100px;
       height: auto;
       width: auto;
     }
     header h1 {
-      flex: 1;
       margin: 0;
-      padding: 0 1rem;
-      text-align: center;
+      font-size: 1.5rem;
     }
     nav {
       background: #26c4ec;
@@ -93,22 +88,8 @@
       color: #26c4ec;
     }
   </style>
-
-  <!-- ✅ Script LikeBtn -->
-  <script>
-    (function(d,e,s){
-      if(d.getElementById("likebtn_wjs")) return;
-      var a = d.createElement(e);
-      var m = d.getElementsByTagName(e)[0];
-      a.async = 1;
-      a.src = s;
-      a.id = "likebtn_wjs";
-      m.parentNode.insertBefore(a, m)
-    })(document, "script", "https://w.likebtn.com/js/w.js");
-  </script>
 </head>
 <body>
-
   <header>
     <img src="logo_immunescape.jpg" alt="Logo ImmunEscape">
     <h1>IMMUNESCAPE, explorer l’immunologie autrement</h1>
@@ -126,81 +107,43 @@
   </nav>
 
   <div class="container">
-    <section id="concept">
-      <h2>Le concept</h2>
-      <p>...</p>
-    </section>
-
-    <section id="public">
-      <h2>À qui s’adresse ImmunEscape ?</h2>
-      <p>...</p>
-    </section>
-
-    <section id="scenarios">
-      <h2>Scénarios disponibles</h2>
-      <ul>
-        <li>...</li>
-      </ul>
-    </section>
-
-    <section class="cta">
-      <h2>Envie de jouer ou d’organiser une session ?</h2>
-      <p>...</p>
-      <a href="mailto:denis.hudrisier@ipbs.fr">Nous contacter</a>
-    </section>
-
-    <section class="cta">
-      <h2>Télécharger la fiche pédagogique</h2>
-      <p>...</p>
-      <a href="fiche_pedagogique_immunescape.pdf" target="_blank" download>📄 Télécharger la fiche (PDF)</a>
-    </section>
-
-    <section id="photos">
-      <h2>Quelques photos</h2>
-      <img src="photo_jeu.jpg" class="gallery" alt="Présentation du jeu">
-      <!-- Ajoutez d'autres images ici -->
-    </section>
-
-    <section id="soutiens">
-      <h2>Ils nous soutiennent</h2>
-      <div class="support-logos">
-        <img src="logo_peps.jpg" alt="PEPS">
-        <img src="logo_campusfab.jpg" alt="CampusFab">
-        <img src="logo_catalyseur.jpg" alt="Catalyseur">
-        <img src="logo_fsi.png" alt="FSI">
-        <img src="logo_fondation.png" alt="Fondation Catalyses">
-        <img src="logo_ut.png" alt="Université de Toulouse">
-      </div>
-    </section>
-
-    <section id="contributeurs">
-      <h2>Ils ont contribué au projet</h2>
-      <p>...</p>
-    </section>
-
-    <section id="installer">
-      <h2>Installer le jeu VR</h2>
-      <p>...</p>
-      <a href="https://drive.google.com/..." target="_blank">📲 Télécharger le jeu (APK)</a><br><br>
-      <a href="Guide Utilisation - Installation Unity + APK.pdf" target="_blank" download>📘 Télécharger le guide d'installation (PDF)</a>
-    </section>
+    <section id="concept"><h2>Le concept</h2><p>...</p></section>
+    <section id="public"><h2>À qui s’adresse ImmunEscape ?</h2><p>...</p></section>
+    <section id="scenarios"><h2>Scénarios disponibles</h2><ul><li>...</li></ul></section>
+    <section class="cta"><h2>Envie de jouer ou d’organiser une session ?</h2><p>...</p><a href="mailto:denis.hudrisier@ipbs.fr">Nous contacter</a></section>
+    <section class="cta"><h2>Télécharger la fiche pédagogique</h2><p>...</p><a href="fiche_pedagogique_immunescape.pdf" target="_blank" download>📄 Télécharger la fiche (PDF)</a></section>
+    <section id="photos"><h2>Quelques photos</h2></section>
+    <section id="soutiens"><h2>Ils nous soutiennent</h2><div class="support-logos"></div></section>
+    <section id="contributeurs"><h2>Ils ont contribué au projet</h2></section>
+    <section id="installer"><h2>Installer le jeu VR</h2><p>...</p></section>
   </div>
 
-  <!-- ✅ Compteur de visites et bouton GitHub -->
+  <!-- Compteur de visites + bouton GitHub Follow -->
   <div style="text-align:center; margin-top: 2rem;">
-    <p>
-      <img alt="Compteur de visites" src="https://hits.sh/github.com/ImmunEscape/ImmunEscape.svg" />
-    </p>
+    <p><img alt="Compteur de visites" src="https://hits.sh/github.com/ImmunEscape/ImmunEscape.svg" /></p>
     <p>
       <iframe src="https://ghbtns.com/github-btn.html?user=ImmunEscape&repo=ImmunEscape&type=follow&count=true"
         frameborder="0" scrolling="0" width="170" height="20" title="GitHub Follow Button"></iframe>
     </p>
   </div>
 
-  <!-- ✅ Bouton Like -->
+  <!-- Bouton Like -->
   <div style="text-align:center; margin-top: 2rem;">
     <div class="likebtn-wrapper" data-theme="github" data-ef="thumbs-up"></div>
   </div>
+
+  <!-- Script LikeBtn -->
+  <script>
+    (function(d,e,s){
+      if(d.getElementById("likebtn_wjs")) return;
+      var a = d.createElement(e);
+      var m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.src = s;
+      a.id = "likebtn_wjs";
+      m.parentNode.insertBefore(a, m)
+    })(document, "script", "https://w.likebtn.com/js/w.js");
+  </script>
 
   <footer>
     Retrouvez-nous aussi sur <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a><br>
