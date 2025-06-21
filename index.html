@@ -5,13 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ImmunEscape - Escape Game Scientifique</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefefe;
-      color: #333;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
     header {
       background: #26c4ec;
       color: white;
@@ -19,92 +13,30 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    header img { height: 180px; }
+    header h1 {
       text-align: center;
-    }
-    .header-logo {
-      flex: 0 0 auto;
-    }
-    .header-title {
       flex: 1;
-      padding: 0 1rem;
+      margin: 0 2rem;
     }
-    .header-title h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    header img {
-      height: 180px;
-    }
-    nav {
-      background: #26c4ec;
-      text-align: center;
-      padding: 0.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h2 {
-      color: #26c4ec;
-    }
-    .gallery {
-      width: 100%;
-      max-width: 700px;
-      display: block;
-      margin: 1rem auto;
-      border-radius: 5px;
-    }
-    .support-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .support-logos img {
-      height: 80px;
-    }
-    .cta {
-      background: #73c2f;
-      padding: 1.5rem;
-      text-align: center;
-      border-radius: 5px;
-    }
-    .cta a {
-      display: inline-block;
-      background: #26c4ec;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      margin-top: 1rem;
-      border-radius: 3px;
-    }
-    footer {
-      background: #26c4ec;
-      padding: 1rem;
-      text-align: center;
-      color: #ffffff;
-    }
+    nav { background: #26c4ec; text-align: center; padding: 0.5rem; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    .container { max-width: 1000px; margin: auto; padding: 2rem; }
+    h2 { color: #26c4ec; }
+    .gallery { width: 100%; max-width: 700px; display: block; margin: 1rem auto; border-radius: 5px; }
+    .support-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .support-logos img { height: 80px; }
+    .cta { background: #73c2f; padding: 1.5rem; text-align: center; border-radius: 5px; }
+    .cta a { display: inline-block; background: #26c4ec; color: white; padding: 0.75rem 1.5rem; text-decoration: none; margin-top: 1rem; border-radius: 3px; }
+    footer { background: #26c4ec; padding: 1rem; text-align: center; color: white; }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-logo">
-      <img src="logo_immunescape.jpg" alt="Logo ImmunEscape">
-    </div>
-    <div class="header-title">
-      <h1>IMMUNESCAPE, explorer l’immunologie autrement</h1>
-    </div>
-    <div class="header-logo">
-      <img src="logo_vr.png" alt="Logo VR">
-    </div>
+    <img src="logo_immunescape.jpg" alt="Logo ImmunEscape">
+    <h1>IMMUNESCAPE, explorer l’immunologie autrement</h1>
+    <img src="logo_vr.png" alt="Logo VR">
   </header>
 
   <nav>
@@ -115,6 +47,7 @@
     <a href="#soutiens">Soutiens</a>
     <a href="#contributeurs">Contributeurs</a>
     <a href="#installer">Installer</a>
+    <a href="#bluesky">Fil Bluesky</a>
   </nav>
 
   <div class="container">
@@ -179,32 +112,21 @@
       <p>Plus de 50 étudiantes et étudiants de licence, master et doctorat</p>
       <h3>Étudiants impliqués dans la conception de la version VR</h3>
       <ul>
-        <li>Esteban Cottignies</li>
-        <li>Yvan Alvarez</li>
-        <li>Jossua Verdier</li>
-        <li>Said Aitahmad</li>
-        <li>Corentin Maris</li>
-        <li>Félix Hudrisier</li>
+        <li>Esteban Cottignies</li><li>Yvan Alvarez</li><li>Jossua Verdier</li><li>Said Aitahmad</li>
+        <li>Corentin Maris</li><li>Félix Hudrisier</li>
       </ul>
       <h3>Volontaires en service civique</h3>
       <ul>
-        <li>Bréogan Bertelet-Polo</li>
-        <li>Thomas Costes</li>
-        <li>Marion Cannac</li>
-        <li>Dorian Pavot</li>
-        <li>Axel Colas</li>
-        <li>Patrick Dubau</li>
+        <li>Bréogan Bertelet-Polo</li><li>Thomas Costes</li><li>Marion Cannac</li>
+        <li>Dorian Pavot</li><li>Axel Colas</li><li>Patrick Dubau</li>
       </ul>
       <h3>Enseignants de la licence MIAMI</h3>
       <ul>
-        <li>Minica Panchetti</li>
-        <li>Raphael Marczak</li>
-        <li>Philippe Marrast</li>
+        <li>Minica Panchetti</li><li>Raphael Marczak</li><li>Philippe Marrast</li>
       </ul>
       <h3>Enseignants de Pharmacie</h3>
       <ul>
-        <li>Fabien Brouillet</li>
-        <li>Charlotte Laborde</li>
+        <li>Fabien Brouillet</li><li>Charlotte Laborde</li>
       </ul>
     </section>
 
@@ -214,31 +136,13 @@
       <a href="https://drive.google.com/file/d/1nkwIfG2pKLUUArviRyHpBaRITORypjk1/view?usp=sharing" target="_blank">📲 Télécharger le jeu (APK)</a><br><br>
       <a href="Guide Utilisation - Installation Unity + APK.pdf" target="_blank" download>📘 Télécharger le guide d'installation (PDF)</a>
     </section>
-  </div>
 
-  <div style="text-align:center; margin-top: 2rem;">
-    <p><img alt="Compteur de visites" src="https://hits.sh/github.com/ImmunEscape/ImmunEscape.svg" /></p>
-    <p>
-      <iframe src="https://ghbtns.com/github-btn.html?user=ImmunEscape&repo=ImmunEscape&type=follow&count=true"
-        frameborder="0" scrolling="0" width="170" height="20" title="GitHub Follow Button"></iframe>
-    </p>
+    <section id="bluesky">
+      <h2>Fil Bluesky</h2>
+      <p>Consultez nos actualités directement via notre fil RSS Bluesky :</p>
+      <p><a href="https://rssky.app/feed/immunescape.bsky.social" target="_blank">📡 Suivre le fil RSS Bluesky</a></p>
+    </section>
   </div>
-
-  <div style="text-align:center; margin-top: 2rem;">
-    <div class="likebtn-wrapper" data-theme="github" data-ef="thumbs-up"></div>
-  </div>
-
-  <script>
-    (function(d,e,s){
-      if(d.getElementById("likebtn_wjs")) return;
-      var a = d.createElement(e);
-      var m = d.getElementsByTagName(e)[0];
-      a.async = 1;
-      a.src = s;
-      a.id = "likebtn_wjs";
-      m.parentNode.insertBefore(a, m)
-    })(document, "script", "https://w.likebtn.com/js/w.js");
-  </script>
 
   <footer>
     Retrouvez-nous aussi sur <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a><br>
