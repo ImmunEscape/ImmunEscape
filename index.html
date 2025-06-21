@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -6,9 +6,20 @@
   <title>ImmunEscape - Escape Game Scientifique</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
-    header { background: #26c4ec; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    header {
+      background: #26c4ec;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     header img { height: 180px; }
-    header h1 { text-align: center; flex: 1; margin: 0 2rem; }
+    header h1 {
+      text-align: center;
+      flex: 1;
+      margin: 0 2rem;
+    }
     nav { background: #26c4ec; text-align: center; padding: 0.5rem; }
     nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
     .container { max-width: 1000px; margin: auto; padding: 2rem; }
@@ -19,87 +30,150 @@
     .cta { background: #73c2f; padding: 1.5rem; text-align: center; border-radius: 5px; }
     .cta a { display: inline-block; background: #26c4ec; color: white; padding: 0.75rem 1.5rem; text-decoration: none; margin-top: 1rem; border-radius: 3px; }
     footer { background: #26c4ec; padding: 1rem; text-align: center; color: white; }
-    .lang-en { display: none; }
-    .lang-switch { text-align: right; margin: 1rem; }
-    .lang-switch button { background: #26c4ec; color: white; border: none; padding: 0.5rem 1rem; cursor: pointer; }
   </style>
-  <script>
-    function toggleLanguage() {
-      const fr = document.querySelectorAll('.lang-fr');
-      const en = document.querySelectorAll('.lang-en');
-      const isFrVisible = fr[0].style.display !== 'none';
-      fr.forEach(el => el.style.display = isFrVisible ? 'none' : '');
-      en.forEach(el => el.style.display = isFrVisible ? '' : 'none');
-    }
-  </script>
 </head>
 <body>
-  <div class="lang-switch">
-    <button onclick="toggleLanguage()">🌐 Changer de langue / Switch Language</button>
-  </div>
-
   <header>
     <img src="logo_immunescape.jpg" alt="Logo ImmunEscape">
-    <h1 class="lang-fr">IMMUNESCAPE, explorer l’immunologie autrement</h1>
-    <h1 class="lang-en">IMMUNESCAPE, exploring immunology differently</h1>
+    <h1>IMMUNESCAPE, explorer l’immunologie autrement</h1>
     <img src="logo_vr.png" alt="Logo VR">
   </header>
 
+<section id="coupdoeil">
+  <h2>En un coup d’œil</h2>
+  <ul style="list-style: none; padding-left: 0; font-size: 1.1rem;">
+    <li>🔬 <strong>Thème :</strong> Immunologie ludique</li>
+    <li>👥 <strong>Public :</strong> 12 à 99 ans, tout public : visiteurs, scolaires, patients, chercheurs</li>
+    <li>🧩 <strong>Formats :</strong> Escape Game Salle / Réalité Virtuelle</li>
+    <li>📍 <strong>Lieux :</strong> Faculté de Pharmacie Toulouse (en salle) ; Itinérant : festivals, écoles, universités (VR)</li>
+  </ul>
+</section>
+
   <nav>
-    <a href="#concept" class="lang-fr">Concept</a>
-    <a href="#concept" class="lang-en">Concept</a>
-    <a href="#public" class="lang-fr">Public</a>
-    <a href="#public" class="lang-en">Audience</a>
-    <a href="#scenarios" class="lang-fr">Scénarios</a>
-    <a href="#scenarios" class="lang-en">Scenarios</a>
-    <a href="#installer" class="lang-fr">Installer</a>
-    <a href="#installer" class="lang-en">Install</a>
+    <a href="#concept">Concept</a>
+    <a href="#public">Public</a>
+    <a href="#scenarios">Scénarios</a>
+    <a href="#photos">Photos</a>
+    <a href="#soutiens">Soutiens</a>
+    <a href="#contributeurs">Contributeurs</a>
+    <a href="#installer">Installer</a>
+    <a href="#bluesky">Fil Bluesky</a>
   </nav>
+
+<section id="video">
+  <h2>Présentation vidéo</h2>
+  <p><em>🎬 Extrait du jeu ImmunEscape en action</em></p>
+  <video controls width="720" style="max-width: 100%; border-radius: 10px;">
+    <source src="18 octobre 2023 - copie.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+  </video>
+</section>
 
   <div class="container">
     <section id="concept">
-      <h2 class="lang-fr">Le concept</h2>
-      <h2 class="lang-en">The Concept</h2>
-      <p class="lang-fr">ImmunEscape est un escape game scientifique, développé à Toulouse, pour faire découvrir les mécanismes de l’immunité de manière ludique et immersive.</p>
-      <p class="lang-en">ImmunEscape is a scientific escape game, developed in Toulouse, to explore immunity mechanisms in a playful and immersive way.</p>
+      <h2>Le concept</h2>
+      <p>ImmunEscape est un escape game scientifique, développé à Toulouse, pour faire découvrir les mécanismes de l’immunité de manière ludique et immersive. En salle ou en réalité virtuelle, vivez une aventure inspirée de la recherche biomédicale.</p>
     </section>
 
     <section id="public">
-      <h2 class="lang-fr">À qui s’adresse ImmunEscape ?</h2>
-      <h2 class="lang-en">Who is ImmunEscape for?</h2>
-      <p class="lang-fr">Le jeu s’adresse à tous les publics : élèves, étudiants, enseignants, patients, curieux...</p>
-      <p class="lang-en">The game is designed for everyone: students, teachers, patients, the curious...</p>
+      <h2>À qui s’adresse ImmunEscape ?</h2>
+      <p>Élèves, étudiants, enseignants, patients, curieux ou passionnés : le jeu s’adapte à tous les publics et s’intègre dans des contextes variés comme la formation, la médiation scientifique ou l’éducation thérapeutique.</p>
     </section>
 
     <section id="scenarios">
-      <h2 class="lang-fr">Scénarios disponibles</h2>
-      <h2 class="lang-en">Available Scenarios</h2>
-      <ul class="lang-fr">
+      <h2>Scénarios disponibles</h2>
+      <ul>
         <li>Immunité contre la tuberculose</li>
         <li>Réponse immunitaire au pneumocoque</li>
-      </ul>
-      <ul class="lang-en">
-        <li>Immunity against tuberculosis</li>
-        <li>Immune response to pneumococcus</li>
+        <li>Stratégies thérapeutiques chez les enfants immunodéficients</li>
       </ul>
     </section>
 
-    <section id="installer" class="cta">
-      <h2 class="lang-fr">Installer le jeu VR</h2>
-      <h2 class="lang-en">Install the VR Game</h2>
-      <p class="lang-fr">Téléchargez l’application et suivez le guide pour votre casque VR.</p>
-      <p class="lang-en">Download the app and follow the guide for your VR headset.</p>
-      <a href="https://drive.google.com/file/d/1nkwIfG2pKLUUArviRyHpBaRITORypjk1/view" target="_blank" class="lang-fr">📲 Télécharger le jeu (APK)</a>
-      <a href="https://drive.google.com/file/d/1nkwIfG2pKLUUArviRyHpBaRITORypjk1/view" target="_blank" class="lang-en">📲 Download the game (APK)</a><br><br>
-      <a href="Guide Utilisation - Installation Unity + APK.pdf" target="_blank" download class="lang-fr">📘 Télécharger le guide d'installation (PDF)</a>
-      <a href="Guide Utilisation - Installation Unity + APK.pdf" target="_blank" download class="lang-en">📘 Download the installation guide (PDF)</a>
+    <section class="cta">
+      <h2>Envie de jouer ou d’organiser une session ?</h2>
+      <p>Contactez-nous pour réserver une session, planifier un événement ou intégrer le jeu à vos programmes pédagogiques.</p>
+      <a href="mailto:denis.hudrisier@ipbs.fr">Nous contacter</a>
     </section>
+
+    <section class="cta">
+      <h2>Télécharger la fiche pédagogique</h2>
+      <p>Accédez à la fiche complète du jeu à partager avec vos publics.</p>
+      <a href="fiche_pedagogique_immunescape.pdf" target="_blank" download>📄 Télécharger la fiche (PDF)</a>
+    </section>
+
+    <section id="photos">
+      <h2>Quelques photos</h2>
+      <img src="photo_jeu.jpg" class="gallery" alt="Présentation du jeu">
+      <img src="photo_salle.jpg" class="gallery" alt="Salle ImmunEscape">
+      <img src="photo_salle2.jpg" class="gallery" alt="Salle 2">
+      <img src="photo_betatest.jpg" class="gallery" alt="Beta test">
+      <img src="photo_eurekafe.jpg" class="gallery" alt="Eurêkafé">
+      <img src="photo_iris.jpg" class="gallery" alt="Journée IRIS">
+      <img src="photo_tuberculose.jpg" class="gallery" alt="Tuberculose">
+      <img src="photo_vr_environment.jpg" class="gallery" alt="VR Environnement">
+    </section>
+
+    <section id="soutiens">
+      <h2>Ils nous soutiennent</h2>
+      <div class="support-logos">
+        <img src="logo_peps.jpg" alt="PEPS">
+        <img src="logo_campusfab.jpg" alt="CampusFab">
+        <img src="logo_catalyseur.jpg" alt="Catalyseur">
+        <img src="logo_fsi.png" alt="FSI">
+        <img src="logo_fondation.png" alt="Fondation Catalyses">
+        <img src="logo_ut.png" alt="Université de Toulouse">
+      </div>
+    </section>
+
+    <section id="contributeurs">
+      <h2>Ils ont contribué au projet</h2>
+      <h3>Étudiants impliqués dans la conception de la version en salle</h3>
+      <p>Plus de 50 étudiantes et étudiants de licence, master et doctorat</p>
+      <h3>Étudiants impliqués dans la conception de la version VR</h3>
+      <ul>
+        <li>Esteban Cottignies</li><li>Yvan Alvarez</li><li>Jossua Verdier</li><li>Said Aitahmad</li>
+        <li>Corentin Maris</li><li>Félix Hudrisier</li>
+      </ul>
+      <h3>Volontaires en service civique</h3>
+      <ul>
+        <li>Bréogan Bertelet-Polo</li><li>Thomas Costes</li><li>Marion Cannac</li>
+        <li>Dorian Pavot</li><li>Axel Colas</li><li>Patrick Dubau</li>
+      </ul>
+      <h3>Enseignants de la licence MIAMI</h3>
+      <ul>
+        <li>Minica Panchetti</li><li>Raphael Marczak</li><li>Philippe Marrast</li>
+      </ul>
+      <h3>Enseignants de Pharmacie</h3>
+      <ul>
+        <li>Fabien Brouillet</li><li>Charlotte Laborde</li>
+      </ul>
+    </section>
+
+    <section id="installer">
+      <h2>Installer le jeu VR</h2>
+      <p>Téléchargez l’application Android (APK) et suivez le guide pour l’installation dans un casque Oculus Quest.</p>
+      <a href="https://drive.google.com/file/d/1nkwIfG2pKLUUArviRyHpBaRITORypjk1/view?usp=sharing" target="_blank">📲 Télécharger le jeu (APK)</a><br><br>
+      <a href="Guide Utilisation - Installation Unity + APK.pdf" target="_blank" download>📘 Télécharger le guide d'installation (PDF)</a>
+    </section>
+
+    
   </div>
 
+<section id="bugs">
+  <h2>🛠️ Bugs connus</h2>
+  <ul>
+    <li>
+      ❗ <strong>Collision avec les parois ou portes fermées :</strong> ne pas tenter de franchir ou de faire franchir à des objets des parois ou portes fermées. Cela peut entraîner un retour forcé au début du jeu.
+    </li>
+    <li>
+      ❗ <strong>Dysfonctionnement du pointeur pour entrer les codes :</strong> le pointeur peut ne pas fonctionner dans certains cas. <strong>Utilisez alors l’outil de téléportation à la place.</strong>
+    </li>
+  </ul>
+</section>
+
   <footer>
-    <p class="lang-fr">Retrouvez-nous aussi sur <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a></p>
-    <p class="lang-en">Find us on <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a></p>
-    &copy; 2025 ImmunEscape
+    Retrouvez-nous aussi sur <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a><br>
+    &copy; 2025 ImmunEscape - Université de Toulouse
   </footer>
 </body>
 </html>
