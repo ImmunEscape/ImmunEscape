@@ -230,6 +230,12 @@ figcaption {
       </li>
     </ul>
   </section>
+  
+  <div style="text-align: center; margin: 2rem 0;">
+  <button id="likeButton" style="font-size: 1.1rem; padding: 0.6rem 1.2rem; background-color: #26c4ec; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    👍 Like <span id="likeCount">0</span>
+  </button>
+</div>
 
   <footer>
     Also find us on <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a><br>
@@ -240,19 +246,11 @@ figcaption {
       <img src="https://hitwebcounter.com/counter/counter.php?page=9876543&style=0006&nbdigits=6&type=page&initCount=0"
            title="Visitor counter" alt="web counter" border="0">
     </a>
-  </div>
-  
-<div style="text-align: center; margin: 2rem 0;">
-  <button id="likeButton" style="font-size: 1.1rem; padding: 0.6rem 1.2rem; background-color: #26c4ec; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    👍 Like <span id="likeCount">0</span>
-  </button>
 </div>
   
   </footer>
 
-  <div class="lang-switch">
-    <a href="index.html">🇫🇷 Français</a>
-    <a href="index_en.html">🇬🇧 English</a>
+
   </div>
   <script>
   const likeButton = document.getElementById("likeButton");
