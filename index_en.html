@@ -248,5 +248,23 @@ figcaption {
     <a href="index.html">🇫🇷 Français</a>
     <a href="index_en.html">🇬🇧 English</a>
   </div>
+  <script>
+  const likeButton = document.getElementById("likeButton");
+  const likeCount = document.getElementById("likeCount");
+
+  // Initialisation
+  let savedLikes = localStorage.getItem("likeCount");
+  if (savedLikes) {
+    likeCount.textContent = savedLikes;
+  }
+
+  likeButton.addEventListener("click", () => {
+    let current = parseInt(likeCount.textContent);
+    current += 1;
+    likeCount.textContent = current;
+    localStorage.setItem("likeCount", current);
+  });
+</script>
+
 </body>
 </html>
