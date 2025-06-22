@@ -20,6 +20,14 @@
       flex: 1;
       margin: 0 2rem;
     }
+    <div class="bandeau-actus">
+  <div class="scrolling-text">
+    🆕 Août 2025 : Publication de la mission VSC d’ImmunEscape &nbsp;&nbsp;&nbsp;
+    🆕 Juin 2025 : Création du site web et compte Bluesky &nbsp;&nbsp;&nbsp;
+    🆕 Mai 2025 : Présentation à Exposciences
+  </div>
+</div>
+
     
 
     nav { background: #26c4ec; text-align: center; padding: 0.5rem; }
@@ -47,6 +55,30 @@ figcaption {
   font-size: 0.95rem;
   color: #555;
   margin-top: 0.5rem;
+}
+.bandeau-actus {
+  background-color: #26c4ec;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  position: relative;
+}
+
+.scrolling-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-actus 30s linear infinite;
+}
+
+.bandeau-actus:hover .scrolling-text {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-actus {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
   </style>
 </head>
