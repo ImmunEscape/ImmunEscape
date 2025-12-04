@@ -11,49 +11,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ImmunEscape - Escape Game Scientifique</title>
-  <style>
-    <body style="background-color: #FFB08F; color: #2B2B2B;">
+ <style>
+    /* Couleurs générales */
+    body {
+      background-color: #FFB08F;
+      color: #2B2B2B;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    /* Bandeau du haut */
     header {
-      background:#FFB08F;
+      background: #FF9D8C;
       color: #2B2B2B;
       padding: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    header img { height: 180px; }
-    header h1 {style="color: #FF9D8C;">
+
+    header img {
+      height: 180px;
+    }
+
+    header h1 {
+      color: #7A3E2A;
       text-align: center;
       flex: 1;
       margin: 0 2rem;
     }
-    
 
-    nav { background: #26c4ec; text-align: center; padding: 0.5rem; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    .container { max-width: 1000px; margin: auto; padding: 2rem; }
-    h2 {style="color: #FF9D8C;"
-  border-bottom: 3px solid #26c4ec;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-    .gallery { width: 100%; max-width: 700px; display: block; margin: 1rem auto; border-radius: 5px; }
-    .support-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem; }
-    .support-logos img { height: 80px; }
-    .cta { background: #73c2f; padding: 1.5rem; text-align: center; border-radius: 5px; }
-    .cta a { display: inline-block; background: #26c4ec; color: white; padding: 0.75rem 1.5rem; text-decoration: none; margin-top: 1rem; border-radius: 3px; }
-    footer { background: #26c4ec; padding: 1rem; text-align: center; color: white; }
+    /* Menu */
+    nav {
+      background: #FF9D8C;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    /* Titres de section */
+    h2 {
+      color: #7A3E2A;
+      border-bottom: 3px solid #FF9D8C;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 5px;
+    }
+
+    .support-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .support-logos img {
+      height: 80px;
+    }
+
+    .cta {
+      background: #FF9D8C;
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 1.5rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #7A3E2A;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      margin-top: 1rem;
+      border-radius: 3px;
+    }
+
+    footer {
+      background: #7A3E2A;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+
     figure {
-  text-align: center;
-  margin: 2rem auto;
-  max-width: 700px;
-}
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 700px;
+    }
 
-figcaption {
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
+    figcaption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
