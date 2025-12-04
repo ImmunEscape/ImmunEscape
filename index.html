@@ -1,17 +1,14 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ImmunEscape - Escape Game Scientifique</title>
 
-  <!-- ✅ Version fiable de Font Awesome depuis leur propre CDN -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" crossorigin="anonymous" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ImmunEscape - Escape Game Scientifique</title>
- <style>
+  <style>
     /* Couleurs générales */
     body {
       background-color: #FFB08F;
@@ -39,6 +36,7 @@
       text-align: center;
       flex: 1;
       margin: 0 2rem;
+      font-size: 1.6rem;
     }
 
     /* Menu */
@@ -53,6 +51,10 @@
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -107,6 +109,10 @@
       border-radius: 3px;
     }
 
+    .cta a:hover {
+      opacity: 0.9;
+    }
+
     footer {
       background: #7A3E2A;
       padding: 1rem;
@@ -125,13 +131,22 @@
       color: #555;
       margin-top: 0.5rem;
     }
+
+    /* Liens généraux */
+    a {
+      color: #7A3E2A;
+    }
+
+    a:hover {
+      color: #FF9D8C;
+    }
   </style>
 </head>
 <body>
   
   <header>
     <img src="logo_immunescape.jpg" alt="Logo ImmunEscape">
-    <h1>IMMUNESCAPE, explorer l’immunologie autrement!</h1>
+    <h1>IMMUNESCAPE, explorer l’immunologie autrement&nbsp;!</h1>
     <img src="logo_vr.png" alt="Logo VR">
   </header>
   
@@ -147,54 +162,49 @@
     <a href="#actus">Actualités</a>
   </nav>
 
-
-<div class="container">
-  
-  <div style="text-align: right; padding: 0.5rem 1rem;">
-  <a href="index.html" style="margin-right: 1rem;">🇫🇷 Français</a>
-  <a href="index_en.html">🇬🇧 English</a>
-</div>
-
-<section id="coupdoeil">
-  <h2>En un coup d’œil</h2>
-  <ul style="list-style: none; padding-left: 0; font-size: 1.1rem;">
-    <li>🔬 <strong>Thème :</strong> Immunologie ludique</li>
-    <li>👥 <strong>Public :</strong> 12 à 99 ans, tout public : visiteurs, scolaires, patients, chercheurs</li>
-    <li>🧩 <strong>Formats :</strong> Escape Game Salle / Réalité Virtuelle</li>
-    <li>📍 <strong>Lieux :</strong> Faculté de Pharmacie Toulouse (en salle) ; Itinérant : festivals, écoles, universités (VR)</li>
-    <li>🎁 <strong>Tarif :</strong> Gratuit</li>
-  </ul>
-</section>
-
-  <section id="actus">
-  <h2>Actualités</h2>
-  <ul>
-    <li><strong>🆕 Novembre 2025 :</strong> Les premières séances de jeu ont repris pour cette année universitaire!</li>
-    <li><strong>🆕 Octobre 2025 :</strong> Noémie sera en charge d'ImmunEscape dans le cadre de <em>son service civique</em>.</li>
-    <li><strong>🆕 Aout 2025 :</strong> Publication de la mission <em>VSC d'ImmunEscape (https://tinyurl.com/ymct2h65)</em>.</li
-    
-    
-
-  </ul>
-</section>
-
-<section id="video">
-  <h2>Présentation vidéo</h2>
-  <p><em>🎬 Extrait du jeu ImmunEscape en action</em></p>
-  <video controls width="720" style="max-width: 100%; border-radius: 10px;">
-    <source src="18 octobre 2023 - copie.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la lecture de vidéos HTML5.
-  </video>
-</section>
-
   <div class="container">
+    
+    <div style="text-align: right; padding: 0.5rem 1rem;">
+      <a href="index.html" style="margin-right: 1rem;">🇫🇷 Français</a>
+      <a href="index_en.html">🇬🇧 English</a>
+    </div>
+
+    <section id="coupdoeil">
+      <h2>En un coup d’œil</h2>
+      <ul style="list-style: none; padding-left: 0; font-size: 1.1rem;">
+        <li>🔬 <strong>Thème :</strong> Immunologie ludique</li>
+        <li>👥 <strong>Public :</strong> 12 à 99 ans, tout public : visiteurs, scolaires, patients, chercheurs</li>
+        <li>🧩 <strong>Formats :</strong> Escape Game Salle / Réalité Virtuelle</li>
+        <li>📍 <strong>Lieux :</strong> Faculté de Pharmacie Toulouse (en salle) ; Itinérant : festivals, écoles, universités (VR)</li>
+        <li>🎁 <strong>Tarif :</strong> Gratuit</li>
+      </ul>
+    </section>
+
+    <section id="actus">
+      <h2>Actualités</h2>
+      <ul>
+        <li><strong>🆕 Novembre 2025 :</strong> Les premières séances de jeu ont repris pour cette année universitaire&nbsp;!</li>
+        <li><strong>🆕 Octobre 2025 :</strong> Noémie sera en charge d'ImmunEscape dans le cadre de <em>son service civique</em>.</li>
+        <li><strong>🆕 Aout 2025 :</strong> Publication de la mission <em>VSC d'ImmunEscape (https://tinyurl.com/ymct2h65)</em>.</li>
+      </ul>
+    </section>
+
+    <section id="video">
+      <h2>Présentation vidéo</h2>
+      <p><em>🎬 Extrait du jeu ImmunEscape en action</em></p>
+      <video controls width="720" style="max-width: 100%; border-radius: 10px;">
+        <source src="18 octobre 2023 - copie.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+      </video>
+    </section>
+
     <section id="concept">
       <h2>Le concept</h2>
       <p>ImmunEscape est un escape game scientifique, développé à Toulouse par des étudiants, pour faire découvrir les mécanismes de l’immunité de manière ludique et immersive. En salle ou en réalité virtuelle, vivez une aventure inspirée de la recherche biomédicale.</p>
     </section>
 
     <section id="public">
-      <h2>À qui s’adresse ImmunEscape ?</h2>
+      <h2>À qui s’adresse ImmunEscape&nbsp;?</h2>
       <p>Élèves, étudiants, enseignants, patients, curieux ou passionnés : le jeu s’adapte à tous les publics et s’intègre dans des contextes variés comme la formation, la médiation scientifique ou l’éducation thérapeutique.</p>
     </section>
 
@@ -208,7 +218,7 @@
     </section>
 
     <section class="cta">
-      <h2>Envie de jouer ou d’organiser une session ?</h2>
+      <h2>Envie de jouer ou d’organiser une session&nbsp;?</h2>
       <p>Contactez-nous pour réserver une session, planifier un événement ou intégrer le jeu à vos programmes pédagogiques.</p>
       <a href="mailto:immunescape@gmail.com">Nous contacter</a>
     </section>
@@ -219,54 +229,50 @@
       <a href="fiche_pedagogique_immunescape.pdf" target="_blank" download>📄 Télécharger la fiche (PDF)</a>
     </section>
 
-    
     <section id="photos">
-  <h2>Quelques photos</h2>
+      <h2>Quelques photos</h2>
 
-  
+      <figure>
+        <img src="photo_jeu.jpg" class="gallery" alt="Présentation du jeu">
+        <figcaption>Première version (poster jeu) - ESOF - Toulouse</figcaption>
+      </figure>
 
-  <figure>
-    <img src="photo_jeu.jpg" class="gallery" alt="Présentation du jeu">
-    <figcaption>Première version (poster jeu) - ESOF - Toulouse</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_betatest.jpg" class="gallery" alt="Beta test">
+        <figcaption>Session de bêta-test - Université de Toulouse</figcaption>
+      </figure>
 
-  <figure>
-    <img src="photo_betatest.jpg" class="gallery" alt="Beta test">
-    <figcaption>Session de bêta-test - Université de Toulouse</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_salle2.jpg" class="gallery" alt="Salle 2">
+        <figcaption>Salle ImmunEscape - Collège, Caraman</figcaption>
+      </figure>
 
-<figure>
-    <img src="photo_salle2.jpg" class="gallery" alt="Salle 2">
-    <figcaption>Salle ImmunEscape - Collège, Caraman</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_salle.jpg" class="gallery" alt="Salle ImmunEscape">
+        <figcaption>Salle ImmunEscape - Pharmacie, Toulouse</figcaption>
+      </figure>
 
-  <figure>
-    <img src="photo_salle.jpg" class="gallery" alt="Salle ImmunEscape">
-    <figcaption>Salle ImmunEscape - Pharmacie, Toulouse</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_eurekafe.jpg" class="gallery" alt="Eurêkafé">
+        <figcaption>Jeu VR - Eurêkafé - Toulouse</figcaption>
+      </figure>
 
-  <figure>
-    <img src="photo_eurekafe.jpg" class="gallery" alt="Eurêkafé">
-    <figcaption>Jeu VR - Eurêkafé - Toulouse</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_iris.jpg" class="gallery" alt="Journée IRIS">
+        <figcaption>Jeu VR - Journée Patients IRIS - Cité de l'Espace, Toulouse</figcaption>
+      </figure>
 
-  <figure>
-    <img src="photo_iris.jpg" class="gallery" alt="Journée IRIS">
-    <figcaption>Jeu VR - Journée Patients IRIS - Cité de l'Espace, Toulouse</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_tuberculose.jpg" class="gallery" alt="Tuberculose">
+        <figcaption>Jeu VR - Journée Mondiale Tuberculose - Université, Toulouse</figcaption>
+      </figure>
 
-  <figure>
-    <img src="photo_tuberculose.jpg" class="gallery" alt="Tuberculose">
-    <figcaption>Jeu VR - Journée Mondiale Tuberculose - Université, Toulouse</figcaption>
-  </figure>
+      <figure>
+        <img src="photo_vr_environment.jpg" class="gallery" alt="VR Environnement">
+        <figcaption>Environnement VR</figcaption>
+      </figure>
+    </section>
 
-  <figure>
-    <img src="photo_vr_environment.jpg" class="gallery" alt="VR Environnement">
-    <figcaption>Environnement VR</figcaption>
-  </figure>
-</section>
-
-</section>
     <section id="soutiens">
       <h2>Ils nous soutiennent</h2>
       <div class="support-logos">
@@ -310,83 +316,75 @@
       <a href="Guide Utilisation - Installation Unity + APK.pdf" target="_blank" download>📘 Télécharger le guide d'installation (PDF)</a>
     </section>
     
-  </div>
+    <section id="bugs">
+      <h2>🛠️ Bugs connus</h2>
+      <ul>
+        <li>
+          ❗ <strong>Collision avec les parois ou portes fermées :</strong> ne pas tenter de franchir ou de faire franchir à des objets des parois ou portes fermées. Cela peut entraîner un retour forcé au début du jeu.
+        </li>
+        <li>
+          ❗ <strong>Dysfonctionnement du pointeur pour entrer les codes :</strong> le pointeur peut ne pas fonctionner dans certains cas. <strong>Utilisez alors l’outil de téléportation à la place.</strong>
+        </li>
+      </ul>
+    </section>
 
-<section id="bugs">
-  <h2>🛠️ Bugs connus</h2>
-  <ul>
-    <li>
-      ❗ <strong>Collision avec les parois ou portes fermées :</strong> ne pas tenter de franchir ou de faire franchir à des objets des parois ou portes fermées. Cela peut entraîner un retour forcé au début du jeu.
-    </li>
-    <li>
-      ❗ <strong>Dysfonctionnement du pointeur pour entrer les codes :</strong> le pointeur peut ne pas fonctionner dans certains cas. <strong>Utilisez alors l’outil de téléportation à la place.</strong>
-    </li>
-  </ul>
-</section>
+    <div style="text-align: center; margin: 3rem 0;">
+      <p style="font-weight: bold; font-size: 1.2rem;">📢 Partagez ImmunEscape avec vos contacts :</p>
 
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://immunescape.github.io/ImmunEscape/" 
+         target="_blank" 
+         style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #4267B2; color: white; text-decoration: none; border-radius: 5px;">
+        <i class="fab fa-facebook"></i> Facebook
+      </a>
 
- <div style="text-align: center; margin: 3rem 0;">
-  <p style="font-weight: bold; font-size: 1.2rem;">📢 Partagez ImmunEscape avec vos contacts :</p>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://immunescape.github.io/ImmunEscape/" 
+         target="_blank" 
+         style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #0077B5; color: white; text-decoration: none; border-radius: 5px;">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://immunescape.github.io/ImmunEscape/" 
-     target="_blank" 
-     style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #4267B2; color: white; text-decoration: none; border-radius: 5px;">
-    <i class="fab fa-facebook"></i> Facebook
-  </a>
+      <a href="https://wa.me/?text=Découvrez%20ImmunEscape%20:%20https://immunescape.github.io/ImmunEscape/" 
+         target="_blank" 
+         style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
 
-  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://immunescape.github.io/ImmunEscape/" 
-     target="_blank" 
-     style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #0077B5; color: white; text-decoration: none; border-radius: 5px;">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
+      <a href="mailto:?subject=Découvre%20ImmunEscape&body=Un%20escape%20game%20pédagogique%20en%20immunologie%20:%20https://immunescape.github.io/ImmunEscape/" 
+         style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px;">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
 
-  <a href="https://wa.me/?text=Découvrez%20ImmunEscape%20:%20https://immunescape.github.io/ImmunEscape/" 
-     target="_blank" 
-     style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px;">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
+  </div><!-- .container -->
 
-  <a href="mailto:?subject=Découvre%20ImmunEscape&body=Un%20escape%20game%20pédagogique%20en%20immunologie%20:%20https://immunescape.github.io/ImmunEscape/" 
-     style="display: inline-block; margin: 0.5rem; padding: 0.6rem 1rem; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px;">
-    <i class="fas fa-envelope"></i> Email
-  </a>
-</div>
-
- 
   <footer>
     Retrouvez-nous aussi sur <a href="https://bsky.app/profile/immunescape.bsky.social" target="_blank">Bluesky @immunescape</a><br>
     &copy; 2025 ImmunEscape - Université de Toulouse
-      <div style="text-align: center; margin-top: 1rem;">
-    <a href="https://www.hitwebcounter.com" target="_blank">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=9876543&style=0006&nbdigits=6&type=page&initCount=0"
-           title="Visitor counter" alt="web counter" border="0">
-    </a>
-  </div>
+    <div style="text-align: center; margin-top: 1rem;">
+      <a href="https://www.hitwebcounter.com" target="_blank">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=9876543&style=0006&nbdigits=6&type=page&initCount=0"
+             title="Visitor counter" alt="web counter" border="0">
+      </a>
+    </div>
   </footer>
   
-    
-  </div>
-  
   <script>
-  const likeButton = document.getElementById("likeButton");
-  const likeCount = document.getElementById("likeCount");
+    const likeButton = document.getElementById("likeButton");
+    const likeCount = document.getElementById("likeCount");
 
-  // Initialisation
-  let savedLikes = localStorage.getItem("likeCount");
-  if (savedLikes) {
-    likeCount.textContent = savedLikes;
-  }
+    if (likeButton && likeCount) {
+      let savedLikes = localStorage.getItem("likeCount");
+      if (savedLikes) {
+        likeCount.textContent = savedLikes;
+      }
 
-  likeButton.addEventListener("click", () => {
-    let current = parseInt(likeCount.textContent);
-    current += 1;
-    likeCount.textContent = current;
-    localStorage.setItem("likeCount", current);
-  });
-</script>
-<style>
-  a { color: #7A3E2A; }
-  a:hover { color: #FF9D8C; }
-</style>
+      likeButton.addEventListener("click", () => {
+        let current = parseInt(likeCount.textContent);
+        current += 1;
+        likeCount.textContent = current;
+        localStorage.setItem("likeCount", current);
+      });
+    }
+  </script>
 </body>
 </html>
