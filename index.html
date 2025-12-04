@@ -256,6 +256,56 @@
     }
 
     /* Responsive simple */
+         /* Bloc organisateurs / mise en avant événementielle */
+    .event-highlight {
+      border-left: 6px solid var(--accent-soft);
+      background: #FFF8F5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-highlight::before {
+      content: "Événement";
+      position: absolute;
+      top: 1.4rem;
+      right: 1.6rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #FFFFFF;
+      opacity: 0.9;
+    }
+
+    .event-highlight ul {
+      margin-top: 0.8rem;
+      padding-left: 1.2rem;
+    }
+
+    .event-highlight li {
+      margin-bottom: 0.3rem;
+    }
+
+    .btn-main {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.6rem;
+      text-decoration: none;
+      margin-top: 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 6px 14px rgba(255, 157, 140, 0.55);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(255, 157, 140, 0.65);
+      background: #ff8a73;
+    }
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -355,6 +405,27 @@
         <li>Réponse immunitaire au pneumocoque</li>
         <li>Stratégies thérapeutiques chez les enfants immunodéficients</li>
       </ul>
+    </section>
+    
+    <section id="organisateurs" class="event-highlight">
+      <h2>Pour les organisateurs d’événements</h2>
+      <p>
+        ImmunEscape s’intègre facilement dans des <strong>festivals, journées de la science,
+        événements de médiation, forums santé</strong> ou programmes pédagogiques.
+      </p>
+      <ul>
+        <li>✅ Activité clé-en-main : salle physique ou version VR</li>
+        <li>✅ Adaptable au public : scolaires, grand public, patients, professionnels</li>
+        <li>✅ Animation encadrée par un enseignant-chercheur / médiateurs formés</li>
+        <li>✅ Contenus validés scientifiquement (immunologie, réponses immunitaires…)</li>
+      </ul>
+      <p style="margin-top: 1rem;">
+        <strong>Vous organisez un événement&nbsp;?</strong><br>
+        Contactez-nous pour discuter de l’intégration d’ImmunEscape dans votre programmation.
+      </p>
+      <a class="btn-main" href="mailto:immunescape@gmail.com?subject=Organisation%20d%27une%20animation%20ImmunEscape&body=Bonjour,%0A%0ANous souhaiterions en savoir plus sur l%27organisation d%27ImmunEscape dans le cadre de notre événement.%0A%0ANom de l%27événement :%0ADates envisagées :%0ALieu :%0APublic ciblé :%0A%0AMerci,%0A">
+        ✉️ Proposer ImmunEscape dans mon événement
+      </a>
     </section>
 
     <section class="cta">
