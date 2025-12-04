@@ -8,27 +8,39 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" crossorigin="anonymous" />
 
-  <style>
-    /* Couleurs générales */
+   <style>
+    /* Couleurs du thème */
+    :root {
+      --accent: #FF9D8C;
+      --accent-soft: #FFB08F;
+      --text-main: #222222;
+      --bg-page: #F7F7FB;
+      --card-bg: #FFFFFF;
+      --card-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    /* Page globale */
     body {
-      background-color: #FFB08F;
-      color: #2B2B2B;
+      background-color: var(--bg-page);
+      color: var(--text-main);
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     /* Bandeau du haut */
     header {
-      background: #FF9D8C;
-      color: #2B2B2B;
-      padding: 1rem;
+      background: #FFFFFF;
+      color: var(--text-main);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #E5E7EB;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
     }
 
     header img {
-      height: 180px;
+      height: 140px;
     }
 
     header h1 {
@@ -37,92 +49,99 @@
       flex: 1;
       margin: 0 2rem;
       font-size: 1.6rem;
+      line-height: 1.3;
     }
 
     /* Menu */
     nav {
-      background: #FF9D8C;
+      background: transparent;
       text-align: center;
-      padding: 0.5rem;
+      padding: 1rem 0 0.5rem;
     }
 
     nav a {
-      color: white;
-      margin: 0 1rem;
+      display: inline-block;
+      color: #7A3E2A;
+      margin: 0.2rem 0.4rem;
+      padding: 0.4rem 0.9rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 157, 140, 0.6);
+      background: #FFFFFF;
+      transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background: var(--accent);
+      color: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(255, 157, 140, 0.5);
     }
 
     .container {
       max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
+      margin: 2rem auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    /* Cartes de contenu */
+    section {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.8rem 1.9rem;
+      margin-bottom: 1.8rem;
+      box-shadow: var(--card-shadow);
     }
 
     /* Titres de section */
     h2 {
       color: #7A3E2A;
-      border-bottom: 3px solid #FF9D8C;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      border-left: 6px solid var(--accent);
+      padding-left: 0.8rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
     }
 
+    h3 {
+      color: #444;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    /* Bloc FR / EN */
+    .lang-switch {
+      text-align: right;
+      padding: 0.5rem 0 1rem;
+      font-size: 0.95rem;
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+
+    /* Listes */
+    ul {
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Photos */
     .gallery {
       width: 100%;
       max-width: 700px;
       display: block;
       margin: 1rem auto;
-      border-radius: 5px;
-    }
-
-    .support-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .support-logos img {
-      height: 80px;
-    }
-
-    .cta {
-      background: #FF9D8C;
-      padding: 1.5rem;
-      text-align: center;
-      border-radius: 5px;
-      margin-top: 1.5rem;
-    }
-
-    .cta a {
-      display: inline-block;
-      background: #7A3E2A;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      margin-top: 1rem;
-      border-radius: 3px;
-    }
-
-    .cta a:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      background: #7A3E2A;
-      padding: 1rem;
-      text-align: center;
-      color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
     }
 
     figure {
       text-align: center;
-      margin: 2rem auto;
+      margin: 1.8rem auto;
       max-width: 700px;
     }
 
@@ -132,15 +151,136 @@
       margin-top: 0.5rem;
     }
 
+    /* Logos de soutien */
+    .support-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .support-logos img {
+      height: 70px;
+      filter: drop-shadow(0 4px 8px rgba(15, 23, 42, 0.12));
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 0.4rem 0.6rem;
+    }
+
+    /* Blocs CTA */
+    .cta {
+      background: #FFF5F1;
+      border: 1px solid rgba(255, 157, 140, 0.6);
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 16px;
+      margin-top: 1.5rem;
+    }
+
+    .cta h2 {
+      border-left: none;
+      padding-left: 0;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.6rem;
+      text-decoration: none;
+      margin-top: 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 6px 14px rgba(255, 157, 140, 0.55);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(255, 157, 140, 0.65);
+    }
+
     /* Liens généraux */
     a {
       color: #7A3E2A;
     }
 
     a:hover {
-      color: #FF9D8C;
+      color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      padding: 1.5rem 1rem 2rem;
+      text-align: center;
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--accent-soft);
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    /* Boutons de partage (on garde leurs couleurs de marque) */
+    .share-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.3);
+    }
+
+    .share-facebook { background-color: #4267B2; }
+    .share-linkedin { background-color: #0077B5; }
+    .share-whatsapp { background-color: #25D366; }
+    .share-email { background-color: #6c757d; }
+
+    .share-buttons a i {
+      margin-right: 0.4rem;
+    }
+
+    /* Bugs section spécifique (un peu plus compact) */
+    #bugs ul {
+      padding-left: 1.1rem;
+    }
+
+    /* Responsive simple */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      header img {
+        height: 110px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      section {
+        padding: 1.4rem 1.3rem;
+      }
     }
   </style>
+
 </head>
 <body>
   
