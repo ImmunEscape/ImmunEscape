@@ -288,6 +288,46 @@
     .feature-item i {
       font-size: 0.95rem;
     }
+    /* Bande de boutons réseaux + réservation */
+    .social-strip {
+      background: transparent;
+      text-align: center;
+      padding: 0.3rem 2rem 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #FFFFFF;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
+      border: none;
+      white-space: nowrap;
+    }
+
+    .social-btn i {
+      font-size: 1rem;
+    }
+
+    .social-ig {
+      background: radial-gradient(circle at 30% 110%, #f9ce34 0%, #ee2a7b 40%, #6228d7 100%);
+    }
+
+    .social-li {
+      background: #0A66C2;
+    }
+
+    .social-book {
+      background: var(--accent);
+    }
 
     /* Bugs section spécifique (un peu plus compact) */
     #bugs ul {
@@ -395,6 +435,18 @@
     <div class="feature-item">
       <i class="fa-solid fa-location-dot"></i> Toulouse & itinérant
     </div>
+  </div>
+  
+  <div class="social-strip">
+    <a href="https://www.instagram.com/immun_escape/" target="_blank" class="social-btn social-ig">
+      <i class="fab fa-instagram"></i><span>Instagram</span>
+    </a>
+    <a href="https://www.linkedin.com/company/immunescape/" target="_blank" class="social-btn social-li">
+      <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+    </a>
+    <a href="https://my.weezevent.com/immunescape-saison-6" target="_blank" class="social-btn social-book">
+      <i class="fa-solid fa-ticket"></i><span>Réserver une session</span>
+    </a>
   </div>
 
   <nav>
