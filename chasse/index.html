@@ -1,1 +1,304 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ImmunEscape — Chasse au trésor</title><style>*{box-sizing:border-box}body{margin:0;background:#eaf5f5;color:#18323b;font:16px/1.5 system-ui,sans-serif}.wrap{max-width:720px;margin:auto;padding:18px}header{background:linear-gradient(115deg,#07556a,#07989c);color:white;border-radius:20px;padding:22px}h1{margin:0;font-size:32px}main{background:white;padding:25px;margin-top:15px;border-radius:20px;box-shadow:0 6px 24px #164b4d17}.q{font-size:21px;font-weight:700}.opt{display:block;padding:14px;margin:10px 0;background:#f3faf9;border:2px solid #d5e4e3;border-radius:12px;cursor:pointer}.opt:has(input:checked){border-color:#078b90;background:#e0f5f3}input{accent-color:#078b90}button{background:#087a88;color:white;font:700 16px system-ui;border:none;padding:13px 21px;border-radius:11px}button:disabled{opacity:.45}.feedback{padding:17px;margin-top:16px;border-radius:12px;background:#e8f6ef}.wrong{background:#fff0eb}.letter{text-align:center;font-size:72px;color:#007c7f;font-weight:800}.clue{border-top:1px solid #a5c4c0;padding-top:14px}.muted{color:#547078;font-size:14px}.hint{margin-top:12px;display:none}.hintbtn{background:white;border:1px solid #087a88;color:#087a88;margin-top:9px}@media print{button{display:none}}</style></head><body><div class="wrap"><header><h1>IMMUNESCAPE</h1>Chasse au trésor • Campus de Rangueil</header><main id="app"></main><p class="muted">Les réponses sont vérifiées sur ce téléphone, sans compte.</p></div><script>const STATIONS=[{"title": "Arrivée par les airs", "place": "Arrivée du téléphérique", "q": "M. tuberculosis présente des PAMP riches en glucides. Quelle famille de récepteurs peut reconnaître ces motifs ?", "opts": ["RLR — récepteurs de type RIG-I", "CLR — lectines de type C", "NLR — récepteurs de type NOD"], "right": 1, "letter": "M", "feedback": ["Les RLR reconnaissent principalement des ARN intracellulaires, notamment viraux.", "Les CLR reconnaissent notamment des motifs glucidiques de surface des mycobactéries.", "Les NLR sont surtout impliqués dans la détection de signaux intracellulaires."], "clue": "Le bacille atteint le poumon. Trouvez un endroit où l’on met ses poumons en action autour d’un ballon ovale.", "hint": "Cherchez le gymnase.", "entry": "La bactérie arrive par les airs : cherchez l’entrée du campus à l’arrivée du téléphérique."}, {"title": "Le poumon : macrophage infecté", "place": "Gymnase", "q": "Un macrophage exprimant un CLR (récepteur au mannose) est infecté par M. tuberculosis. Que se passe-t-il ?", "opts": ["Ils produisent des anticorps spécifiques.", "Ils phagocytent et éliminent systématiquement le bacille.", "Ils phagocytent le bacille, mais n’arrivent pas toujours à l’éliminer et ont besoin d’aide."], "right": 2, "letter": "E", "feedback": ["Les anticorps sont produits par les plasmocytes, et non par les macrophages.", "M. tuberculosis peut contrarier la maturation du phagosome et persister dans des macrophages.", "Le bacille peut survivre à la phagocytose ; les lymphocytes T contribueront à renforcer les défenses antimicrobiennes."], "clue": "Une cellule dendritique part vers le ganglion par la lymphe. Rejoignez un grand axe de circulation dont le nom évoque les sciences.", "hint": "Le Cours des Sciences.", "entry": "Un endroit où l’on met ses poumons en action autour d’un ballon ovale."}, {"title": "La lymphe : cellule dendritique", "place": "Cours des Sciences", "q": "Quel phénotype permet à une cellule dendritique mature de rejoindre le ganglion et d’activer un lymphocyte T naïf ?", "opts": ["CMH élevé, CD80/CD86 élevés, CCR7 absent", "Expression élevée de PRR uniquement", "CMH élevé, CD80/CD86 élevés et CCR7 exprimé"], "right": 2, "letter": "M", "feedback": ["Le CMH et la costimulation sont favorables, mais l’absence de CCR7 compromet l’orientation vers le ganglion.", "Les PRR détectent les microbes mais ne suffisent ni à la migration ni à la costimulation des lymphocytes T naïfs.", "La cellule dendritique mature exprime CMH et CD80/CD86, tandis que CCR7 facilite sa migration en réponse à CCL19/CCL21."], "clue": "Le ganglion est un lieu de rencontre et d’agrégation. Trouvez celui où les étudiants se rassemblent souvent vers midi.", "hint": "Le restaurant universitaire.", "entry": "Un grand axe de circulation : le Cours des Sciences."}, {"title": "Ganglion : activation des lymphocytes T", "place": "Restaurant universitaire", "q": "Quelle différenciation lymphocytaire produit la cytokine qui aide le macrophage à combattre M. tuberculosis ?", "opts": ["Th2, production d’IL-5", "Th1, production d’IFNγ", "Tr1, production de TGFβ"], "right": 1, "letter": "O", "feedback": ["Les Th2 peuvent produire de l’IL-5, associée notamment aux réponses éosinophiliques, mais ce n’est pas l’aide antituberculeuse attendue.", "Les lymphocytes Th1 produisent de l’IFNγ, qui active les macrophages.", "Les Tr1 sont avant tout régulateurs (notamment IL-10, parfois TGFβ) : ce n’est pas la fonction recherchée ici."], "clue": "Le lymphocyte activé quitte le ganglion et retourne vers le poumon par le sang. Empruntez un autre grand axe de circulation du campus.", "hint": "La rue Guyot.", "entry": "Un lieu de rencontre et d’agrégation, souvent vers midi."}, {"title": "Le sang : vers le poumon", "place": "Rue Guyot", "q": "De quoi dépend principalement l’entrée du lymphocyte T effecteur dans le poumon inflammatoire ?", "opts": ["D’un code associant récepteurs de chimiokines et molécules d’adhérence", "De cytokines et de lipides inflammatoires uniquement", "Du TCR et du CMH uniquement"], "right": 0, "letter": "I", "feedback": ["Les chimiokines, leurs récepteurs et les molécules d’adhérence orchestrent l’adhérence et la transmigration.", "Les cytokines et médiateurs lipidiques contribuent à l’inflammation, mais ne remplacent pas les signaux d’adressage et d’adhérence.", "La reconnaissance TCR–peptide-CMH ne suffit pas à l’extravasation à travers l’endothélium."], "clue": "Faites vite ! L’infection a gagné du terrain dans le poumon : cherchez un espace où les poumons s’activent autour d’un ballon rond.", "hint": "Le terrain de sport extérieur, à côté du gymnase.", "entry": "Un autre grand axe de circulation pour revenir vers le poumon : la rue Guyot."}, {"title": "Retour au poumon : action de l’IFNγ", "place": "Terrain de sport près du gymnase", "q": "Quel mécanisme antimicrobien l’IFNγ peut-il renforcer dans un macrophage infecté ?", "opts": ["Production de perforine", "Production d’histamine", "Production de dérivés réactifs de l’oxygène et de l’azote"], "right": 2, "letter": "R", "feedback": ["La perforine est principalement un effecteur des lymphocytes cytotoxiques et des cellules NK, pas un mécanisme typique des macrophages activés par l’IFNγ.", "L’histamine est surtout libérée par les mastocytes et les basophiles ; ce n’est pas l’effet antimicrobien attendu.", "L’IFNγ active des programmes antimicrobiens incluant, selon le modèle, des espèces réactives de l’oxygène et de l’azote."], "clue": "La réponse a contenu l’infection. Il faut maintenant en garder la trace : cherchez le lieu qui conserve la mémoire des savoirs, au rayon immunologie.", "hint": "La bibliothèque universitaire, rayon immunologie.", "entry": "L’infection a gagné du terrain : les poumons en action autour d’un ballon rond."}, {"title": "Le centre de la mémoire", "place": "Bibliothèque — rayon immunologie", "q": "Quelle population conserve la mémoire de la réponse lymphocytaire T antituberculeuse ?", "opts": ["Des plasmocytes", "Des cellules dendritiques", "Des lymphocytes T mémoire"], "right": 2, "letter": "E", "feedback": ["Les plasmocytes proviennent des lymphocytes B et produisent des anticorps ; ils ne constituent pas la mémoire T recherchée.", "Les cellules dendritiques présentent les antigènes, mais ne constituent pas le compartiment de mémoire clonale des lymphocytes T.", "Les lymphocytes T mémoire peuvent persister et répondre plus rapidement lors d’une nouvelle rencontre avec l’antigène."], "clue": "Mission accomplie ! Assemblez les sept lettres pour former le mot final.", "hint": "MÉMOIRE", "entry": "Le lieu du support de la mémoire : la bibliothèque, rayon immunologie."}];const params=new URLSearchParams(location.search);let n=parseInt(params.get('s')||params.get('station'),10);const st=STATIONS[n-1],app=document.getElementById('app');if(!st){app.innerHTML='<h2>Bienvenue !</h2><p>Scannez le QR code de la station pour commencer.</p><p><b>Départ :</b> la bactérie arrive par les airs. Retrouvez l’arrivée du téléphérique.</p>';}else{let order=st.opts.map((o,i)=>'<label class="opt"><input type="radio" name="answer" value="'+i+'"> <b>'+String.fromCharCode(65+i)+'.</b> '+o+'</label>').join('');app.innerHTML='<p class="muted">STATION '+n+' / 7</p><h2>'+st.title+'</h2><p class="q">'+st.q+'</p>'+order+'<button id="validate" disabled>Valider</button><div id="result" aria-live="polite"></div>';document.querySelectorAll('input[name="answer"]').forEach(x=>x.onchange=()=>document.getElementById('validate').disabled=false);document.getElementById('validate').onclick=()=>{let ans=document.querySelector('input[name="answer"]:checked');if(!ans)return;let a=Number(ans.value),correct=a===st.right;let el=document.getElementById('result');if(correct){el.innerHTML='<div class="feedback"><h2>✓ Bonne réponse !</h2><p>'+st.feedback[a]+'</p><p class="muted">LETTRE GAGNÉE</p><div class="letter">'+st.letter+'</div><div class="clue"><b>'+(n===7?'Défi terminé':'Prochaine destination')+'</b><p>'+st.clue+'</p><button class="hintbtn" id="more" type="button">Indice supplémentaire</button><p class="hint" id="hint">'+st.hint+'</p></div></div>';document.getElementById('more').onclick=()=>document.getElementById('hint').style.display='block';document.getElementById('validate').disabled=true;}else{el.innerHTML='<div class="feedback wrong"><h2>↻ Ce n’est pas la bonne réponse</h2><p>'+st.feedback[a]+'</p><b>Réessayez en choisissant une autre proposition.</b></div>';}};}</script></body></html>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ImmunEscape — Chasse au trésor</title><style>
+* {
+    box-sizing:border-box
+}
+body {
+    margin:0;
+    background:#eaf5f5;
+    color:#18323b;
+    font:16px/1.5 system-ui,sans-serif
+}
+.wrap {
+    max-width:720px;
+    margin:auto;
+    padding:18px
+}
+header {
+    background:linear-gradient(115deg,#07556a,#07989c);
+    color:white;
+    border-radius:20px;
+    padding:22px
+}
+h1 {
+    margin:0;
+    font-size:32px
+}
+main {
+    background:white;
+    padding:25px;
+    margin-top:15px;
+    border-radius:20px;
+    box-shadow:0 6px 24px #164b4d17
+}
+.q {
+    font-size:21px;
+    font-weight:700
+}
+.opt {
+    display:block;
+    padding:14px;
+    margin:10px 0;
+    background:#f3faf9;
+    border:2px solid #d5e4e3;
+    border-radius:12px;
+    cursor:pointer
+}
+.opt:has(input:checked) {
+    border-color:#078b90;
+    background:#e0f5f3
+}
+input {
+    accent-color:#078b90
+}
+button {
+    background:#087a88;
+    color:white;
+    font:700 16px system-ui;
+    border:none;
+    padding:13px 21px;
+    border-radius:11px
+}
+button:disabled {
+    opacity:.45
+}
+.feedback {
+    padding:17px;
+    margin-top:16px;
+    border-radius:12px;
+    background:#e8f6ef
+}
+.wrong {
+    background:#fff0eb
+}
+.letter {
+    text-align:center;
+    font-size:72px;
+    color:#007c7f;
+    font-weight:800
+}
+.clue {
+    border-top:1px solid #a5c4c0;
+    padding-top:14px
+}
+.muted {
+    color:#547078;
+    font-size:14px
+}
+.hint {
+    margin-top:12px;
+    display:none
+}
+.hintbtn {
+    background:white;
+    border:1px solid #087a88;
+    color:#087a88;
+    margin-top:9px
+}
+@media print {
+    button {
+    display:none
+}
+}
+</style></head><body><div class="wrap"><header><h1>IMMUNESCAPE</h1>Chasse au trésor • Campus de Rangueil</header><main id="app"></main><p class="muted">Les réponses sont vérifiées sur ce téléphone, sans compte.</p></div><script>
+const STATIONS = [
+    {
+        "title": "Arrivée par les airs",
+        "place": "Arrivée du téléphérique",
+        "q": "M. tuberculosis présente des PAMP riches en glucides. Quelle famille de récepteurs peut reconnaître ces motifs ?",
+        "opts": [
+            "RLR — récepteurs de type RIG-I",
+            "CLR — lectines de type C",
+            "NLR — récepteurs de type NOD"
+        ],
+        "right": 1,
+        "letter": "M",
+        "feedback": [
+            "Les RLR reconnaissent principalement des ARN intracellulaires, notamment viraux.",
+            "Les CLR reconnaissent notamment des motifs glucidiques de surface des mycobactéries.",
+            "Les NLR sont surtout impliqués dans la détection de signaux intracellulaires."
+        ],
+        "clue": "Le bacille atteint le poumon. Trouvez un endroit où l’on met ses poumons en action autour d’un ballon ovale.",
+        "hint": "Cherchez le gymnase.",
+        "entry": "La bactérie arrive par les airs : cherchez l’entrée du campus à l’arrivée du téléphérique."
+    },
+    {
+        "title": "Le poumon : macrophage infecté",
+        "place": "Gymnase",
+        "q": "Un macrophage exprimant un CLR (récepteur au mannose) est infecté par M. tuberculosis. Que se passe-t-il ?",
+        "opts": [
+            "Ils produisent des anticorps spécifiques.",
+            "Ils phagocytent et éliminent systématiquement le bacille.",
+            "Ils phagocytent le bacille, mais n’arrivent pas toujours à l’éliminer et ont besoin d’aide."
+        ],
+        "right": 2,
+        "letter": "E",
+        "feedback": [
+            "Les anticorps sont produits par les plasmocytes, et non par les macrophages.",
+            "M. tuberculosis peut contrarier la maturation du phagosome et persister dans des macrophages.",
+            "Le bacille peut survivre à la phagocytose ; les lymphocytes T contribueront à renforcer les défenses antimicrobiennes."
+        ],
+        "clue": "Une cellule dendritique part vers le ganglion par la lymphe. Rejoignez un grand axe de circulation dont le nom évoque les sciences.",
+        "hint": "Le Cours des Sciences.",
+        "entry": "Un endroit où l’on met ses poumons en action autour d’un ballon ovale."
+    },
+    {
+        "title": "La lymphe : cellule dendritique",
+        "place": "Cours des Sciences",
+        "q": "Quel phénotype permet à une cellule dendritique mature de rejoindre le ganglion et d’activer un lymphocyte T naïf ?",
+        "opts": [
+            "CMH élevé, CD80/CD86 élevés, CCR7 absent",
+            "Expression élevée de PRR uniquement",
+            "CMH élevé, CD80/CD86 élevés et CCR7 exprimé"
+        ],
+        "right": 2,
+        "letter": "M",
+        "feedback": [
+            "Le CMH et la costimulation sont favorables, mais l’absence de CCR7 compromet l’orientation vers le ganglion.",
+            "Les PRR détectent les microbes mais ne suffisent ni à la migration ni à la costimulation des lymphocytes T naïfs.",
+            "La cellule dendritique mature exprime CMH et CD80/CD86, tandis que CCR7 facilite sa migration en réponse à CCL19/CCL21."
+        ],
+        "clue": "Le ganglion est un lieu de rencontre et d’agrégation. Trouvez celui où les étudiants se rassemblent souvent vers midi.",
+        "hint": "Le restaurant universitaire.",
+        "entry": "Un grand axe de circulation : le Cours des Sciences."
+    },
+    {
+        "title": "Ganglion : activation des lymphocytes T",
+        "place": "Restaurant universitaire",
+        "q": "Quelle différenciation lymphocytaire produit la cytokine qui aide le macrophage à combattre M. tuberculosis ?",
+        "opts": [
+            "Th2, production d’IL-5",
+            "Th1, production d’IFNγ",
+            "Tr1, production de TGFβ"
+        ],
+        "right": 1,
+        "letter": "O",
+        "feedback": [
+            "Les Th2 peuvent produire de l’IL-5, associée notamment aux réponses éosinophiliques, mais ce n’est pas l’aide antituberculeuse attendue.",
+            "Les lymphocytes Th1 produisent de l’IFNγ, qui active les macrophages.",
+            "Les Tr1 sont avant tout régulateurs (notamment IL-10, parfois TGFβ) : ce n’est pas la fonction recherchée ici."
+        ],
+        "clue": "Le lymphocyte activé quitte le ganglion et retourne vers le poumon par le sang. Empruntez un autre grand axe de circulation du campus.",
+        "hint": "La rue Guyot.",
+        "entry": "Un lieu de rencontre et d’agrégation, souvent vers midi."
+    },
+    {
+        "title": "Le sang : vers le poumon",
+        "place": "Rue Guyot",
+        "q": "De quoi dépend principalement l’entrée du lymphocyte T effecteur dans le poumon inflammatoire ?",
+        "opts": [
+            "D’un code associant récepteurs de chimiokines et molécules d’adhérence",
+            "De cytokines et de lipides inflammatoires uniquement",
+            "Du TCR et du CMH uniquement"
+        ],
+        "right": 0,
+        "letter": "I",
+        "feedback": [
+            "Les chimiokines, leurs récepteurs et les molécules d’adhérence orchestrent l’adhérence et la transmigration.",
+            "Les cytokines et médiateurs lipidiques contribuent à l’inflammation, mais ne remplacent pas les signaux d’adressage et d’adhérence.",
+            "La reconnaissance TCR–peptide-CMH ne suffit pas à l’extravasation à travers l’endothélium."
+        ],
+        "clue": "Faites vite ! L’infection a gagné du terrain dans le poumon : cherchez un espace où les poumons s’activent autour d’un ballon rond.",
+        "hint": "Le terrain de sport extérieur, à côté du gymnase.",
+        "entry": "Un autre grand axe de circulation pour revenir vers le poumon : la rue Guyot."
+    },
+    {
+        "title": "Retour au poumon : action de l’IFNγ",
+        "place": "Terrain de sport près du gymnase",
+        "q": "Quel mécanisme antimicrobien l’IFNγ peut-il renforcer dans un macrophage infecté ?",
+        "opts": [
+            "Production de perforine",
+            "Production d’histamine",
+            "Production de dérivés réactifs de l’oxygène et de l’azote"
+        ],
+        "right": 2,
+        "letter": "R",
+        "feedback": [
+            "La perforine est principalement un effecteur des lymphocytes cytotoxiques et des cellules NK, pas un mécanisme typique des macrophages activés par l’IFNγ.",
+            "L’histamine est surtout libérée par les mastocytes et les basophiles ; ce n’est pas l’effet antimicrobien attendu.",
+            "L’IFNγ active des programmes antimicrobiens incluant, selon le modèle, des espèces réactives de l’oxygène et de l’azote."
+        ],
+        "clue": "La réponse a contenu l’infection. Il faut maintenant en garder la trace : cherchez le lieu qui conserve la mémoire des savoirs, au rayon immunologie.",
+        "hint": "La bibliothèque universitaire, rayon immunologie.",
+        "entry": "L’infection a gagné du terrain : les poumons en action autour d’un ballon rond."
+    },
+    {
+        "title": "Le centre de la mémoire",
+        "place": "Bibliothèque — rayon immunologie",
+        "q": "Quelle population conserve la mémoire de la réponse lymphocytaire T antituberculeuse ?",
+        "opts": [
+            "Des plasmocytes",
+            "Des cellules dendritiques",
+            "Des lymphocytes T mémoire"
+        ],
+        "right": 2,
+        "letter": "E",
+        "feedback": [
+            "Les plasmocytes proviennent des lymphocytes B et produisent des anticorps ; ils ne constituent pas la mémoire T recherchée.",
+            "Les cellules dendritiques présentent les antigènes, mais ne constituent pas le compartiment de mémoire clonale des lymphocytes T.",
+            "Les lymphocytes T mémoire peuvent persister et répondre plus rapidement lors d’une nouvelle rencontre avec l’antigène."
+        ],
+        "clue": "Mission accomplie ! Assemblez les sept lettres pour former le mot final.",
+        "hint": "MÉMOIRE",
+        "entry": "Le lieu du support de la mémoire : la bibliothèque, rayon immunologie."
+    }
+];
+
+const params = new URLSearchParams(location.search);
+let n = parseInt(params.get('s') || params.get('station'), 10);
+const st = STATIONS[n - 1];
+const app = document.getElementById('app');
+
+if (!st) {
+    app.innerHTML = '<h2>Bienvenue !</h2>' +
+        '<p>Scannez le QR code de la station pour commencer.</p>' +
+        '<p><b>Départ :</b> la bactérie arrive par les airs. Retrouvez l’arrivée du téléphérique.</p>';
+} else {
+    const order = st.opts.map((option, i) =>
+        '<label class="opt"><input type="radio" name="answer" value="' + i + '"> ' +
+        '<b>' + String.fromCharCode(65 + i) + '.</b> ' + option + '</label>'
+    ).join('');
+
+    app.innerHTML = '<p class="muted">STATION ' + n + ' / 7</p>' +
+        '<h2>' + st.title + '</h2>' +
+        '<p class="q">' + st.q + '</p>' + order +
+        '<button id="validate" disabled>Valider</button>' +
+        '<div id="result" aria-live="polite"></div>';
+
+    document.querySelectorAll('input[name="answer"]').forEach(input => {
+        input.onchange = () => {
+            document.getElementById('validate').disabled = false;
+        };
+    });
+
+    document.getElementById('validate').onclick = () => {
+        const selected = document.querySelector('input[name="answer"]:checked');
+        if (!selected) return;
+
+        const answer = Number(selected.value);
+        const correct = answer === st.right;
+        const result = document.getElementById('result');
+
+        if (correct) {
+            result.innerHTML =
+                '<div class="feedback">' +
+                '<h2>✓ Bonne réponse !</h2><p>' + st.feedback[answer] + '</p>' +
+                '<p class="muted">LETTRE GAGNÉE</p><div class="letter">' + st.letter + '</div>' +
+                '<div class="clue"><b>' + (n === 7 ? 'Défi terminé' : 'Prochaine destination') +
+                '</b><p>' + st.clue + '</p>' +
+                '<button class="hintbtn" id="more" type="button">Indice supplémentaire</button>' +
+                '<p class="hint" id="hint">' + st.hint + '</p></div></div>';
+
+            document.getElementById('more').onclick = () => {
+                document.getElementById('hint').style.display = 'block';
+            };
+            document.getElementById('validate').disabled = true;
+        } else {
+            result.innerHTML =
+                '<div class="feedback wrong">' +
+                '<h2>↻ Ce n’est pas la bonne réponse</h2>' +
+                '<p>' + st.feedback[answer] + '</p>' +
+                '<b>Réessayez en choisissant une autre proposition.</b></div>';
+        }
+    };
+}
+</script></body></html>
